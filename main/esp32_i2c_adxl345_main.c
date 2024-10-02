@@ -20,7 +20,7 @@ static void sensorTask(void *pvParameters) {
 	while (1) {
 		getAccelerometerData(acc);
 		ESP_LOGI(TAG,"X=%d,Y=%d,Z=%d\n",(int8_t)acc[0],(int8_t)acc[1],(int8_t)acc[2]);
-		vTaskDelay(1000 / portTICK_RATE_MS);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}
 
 }
